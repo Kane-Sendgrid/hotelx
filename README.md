@@ -1,4 +1,4 @@
-hotelx
-======
+HotelX.co
+=========
 
-Have a little fun while traveling
+A platform for people to connect with each other at hotels
