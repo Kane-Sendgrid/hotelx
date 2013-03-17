@@ -11,9 +11,8 @@
         </h1>
     </div>
     <div data-role="content">
-        <article>
-
-        </article>
+        <article></article>
+        <span class="debug" id="geo_location"></span>
     </div>
 
         <div data-role="navbar" data-iconpos="left" data-position="fixed">

@@ -30,6 +30,12 @@ function success(position) {
 
   document.querySelector('article').appendChild(mapcanvas);
 
+  //document.getElementById("mapcanvas")
+  lat = position.coords.latitude, long = position.coords.longitude, accuracy = position.coords.accuracy;
+  geo_info = "lat: " + lat + ", long: " + long + ", accuracy:" + accuracy;
+  $("#geo_location").html(geo_info);
+  console.log(geo_info);
+
   var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
   var myOptions = {
     zoom: 15,
