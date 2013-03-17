@@ -1,3 +1,11 @@
+// check for online or offline?
+// setInterval(function () {
+//   statusElem.className = navigator.onLine ? 'online' : 'offline';
+//   statusElem.innerHTML = navigator.onLine ? 'online' : 'offline';
+// }, 250);
+
+//navigator.onLine ? on : off
+
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(success, error);
 } else {
