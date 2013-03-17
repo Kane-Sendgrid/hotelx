@@ -4,6 +4,10 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-  	"express": "3.x"
+  	"express": "3.x",
+  	"express-partials": "0.0.x",
+  	"jquery": "1.8.3",
+  	"consolidate": "0.8.x",
+  	"haml-coffee": "1.10.x"
   }
 }
