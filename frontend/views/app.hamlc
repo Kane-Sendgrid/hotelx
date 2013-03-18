@@ -1,15 +1,8 @@
-//%script{:type => "text/javascript", :src  => "http://coffeescript.org/extras/coffee-script.js"}
-//%script{:type => "text/javascript", :src  => "/js/geo.coffee"}
 %script{:type => "text/javascript", :src  => "http://maps.google.com/maps/api/js?sensor=false"}
-%script{:type => "text/javascript", :src  => "/js/geo.js"}
+!= js("geo")
+!= js("socket.io")
 
-:html
 <div data-role="page" id="page1">
-    <div data-theme="a" data-role="header">
-        <h1>
-            HotelX
-        </h1>
-    </div>
     <div data-role="content">
         <article></article>
         <span class="debug" id="geo_location"></span>
@@ -165,5 +158,3 @@
 
 
 </div>
-
-

@@ -4,12 +4,22 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "coffee-script"      : "1.6.x",
     "consolidate"        : "0.8.x",
     "crypto"             : "0.0.x",
   	"express"            : "3.x",
   	"express-partials"   : "0.0.x",
     "express-useragent"  : "0.0.x",
   	"haml-coffee"        : "1.10.x",
-    "jquery"             : "1.8.3"
+    "jquery"             : "1.8.3",
+    "socket.io"          : "0.9.x"
+  },
+  "scripts": {
+    "start": "coffee -c assets/js/*.coffee; coffee app.coffee",
+    "test": "coffee -c assets/js/*.coffee"
+  },
+  "engines": {
+    "node": "~0.8.x",
+    "npm": "1.2.x"
   }
 }
