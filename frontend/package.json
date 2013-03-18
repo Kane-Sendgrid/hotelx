@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "coffee-script"      : "1.6.x",
+    "connect-assets"     : "*",
     "consolidate"        : "0.8.x",
     "crypto"             : "0.0.x",
   	"express"            : "3.x",
