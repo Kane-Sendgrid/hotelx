@@ -7,8 +7,6 @@ http = require 'http'
 http_proxy = require 'http-proxy'
 socket_io = require 'socket.io'
 connect_assets = require 'connect-assets'
-
-
 app = express()
 
 # settings:
@@ -17,10 +15,10 @@ crypto_secret = '35345453dfgja2sljf657sdfs034597xvlklnwrov345rn3lifslk345f345lkl
 
 # turn on layout.hamlc
 app.use partials()
-app.use require('connect-assets')()
 app.engine 'hamlc', consolidate['haml-coffee']
 app.set 'view engine', 'hamlc'
 app.use useragent.express()
+app.use require('connect-assets')()
 
 app.get '/', (req, res) ->
 	res.render 'app', name: 'Customer1'
