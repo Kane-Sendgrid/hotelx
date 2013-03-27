@@ -22,14 +22,12 @@ success = (position) ->
   mapcanvas.style.width = "300px"
   document.querySelector("article").appendChild mapcanvas
 
-  #document.getElementById("mapcanvas")
   lat = position.coords.latitude
   long = position.coords.longitude
   accuracy = position.coords.accuracy
 
   geo_info = "lat: " + lat + ", long: " + long + ", accuracy:" + accuracy
   $("#geo_location").html geo_info
-  console.log geo_info
   latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
   myOptions =
     zoom: 15
@@ -47,9 +45,13 @@ success = (position) ->
     title: "You are here! (at least within a " + position.coords.accuracy + " meter radius)"
   )
 error = (msg) ->
-  console.log msg
+  console.log 'error: ', msg
+
 if navigator.geolocation
-  navigator.geolocation.getCurrentPosition success, error
+  navigator.geolocation.watchPosition success, error, {
+    enableHighAccuracy: true,
+    maximumAge: 5000
+  }
 else
   error "not supported"
 

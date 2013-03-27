@@ -1,4 +1,4 @@
-socket = io.connect "http://localhost:8080"
+socket = io.connect "http://localhost:3000"
 
 socket.emit "chat",
 	"ping from client!"

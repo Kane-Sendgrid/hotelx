@@ -32,10 +32,10 @@ socket_io = socket_io.listen(server)
 server.listen(app.port)
 
 socket_io.sockets.on "connection", (socket) ->
-
 	socket.on "chat", (data) ->
 		socket.emit "chat-reply",
 			"response from server: " + data
+
 
 console.log 'Proxy is listening on port ' + app.proxy_port
 console.log 'Hotelx.com is listening on port ' + app.port
